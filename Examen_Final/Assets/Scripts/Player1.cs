@@ -16,19 +16,19 @@ public class Player1 : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            rb.AddForce(Vector3.forward * force);
+            rb.AddForce(Vector3.back * force);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            rb.AddForce(Vector3.back * (force));
+            rb.AddForce(Vector3.forward * (force));
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            rb.AddForce(Vector3.left * force);
+            rb.AddForce(Vector3.right * force);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            rb.AddForce(Vector3.right * force);
+            rb.AddForce(Vector3.left * force);
         }
         if (Input.GetKey(KeyCode.RightShift))
         {

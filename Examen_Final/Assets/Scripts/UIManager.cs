@@ -19,7 +19,9 @@ public class UIManager : MonoBehaviour
     public Button btnLoad;
     public Button btnExit;
     public Canvas canvas;
-    public GameObject WhiteBall;
+    public GameObject Player1;
+   
+
 
     // Start is called before the first frame update
     void Start()
@@ -104,12 +106,12 @@ public class UIManager : MonoBehaviour
 
     private SaveData CreateSaveGameObject()
     {
-        var whiteBallData = new SaveData();
-        whiteBallData.positionX = WhiteBall.transform.position.x;
-        whiteBallData.positionY = WhiteBall.transform.position.y;
-        whiteBallData.positionZ = WhiteBall.transform.position.z;
+        var player1 = new SaveData();
+        player1.positionX = Player1.transform.position.x;
+        player1.positionY = Player1.transform.position.y;
+        player1.positionZ = Player1.transform.position.z;
 
-        return whiteBallData;
+        return player1;
     }
 
     public void LoadClicked()
@@ -136,7 +138,7 @@ public class UIManager : MonoBehaviour
 
             Debug.Log(save);
 
-            WhiteBall.transform.position = new Vector3(save.positionX, save.positionY, save.positionZ);
+            Player1.transform.position = new Vector3(save.positionX, save.positionY, save.positionZ);
             Debug.Log("Game Loaded");
         }
         else
